@@ -94,196 +94,196 @@ const photoData = {
     ],
     events: [
         {
-            src: 'images/events/WhatsApp Image 2025-02-09 at 00.07.47_48ef2892-min.jpg',
+            src: 'images/Events/WhatsApp Image 2025-02-09 at 00.07.47_48ef2892-min.jpg',
             title: 'Event Photo 1',
             description: 'Special moments captured'
         },
         {
-            src: 'images/events/WhatsApp Image 2025-02-09 at 00.07.46_5a8b63b5-min.jpg',
+            src: 'images/Events/WhatsApp Image 2025-02-09 at 00.07.46_5a8b63b5-min.jpg',
             title: 'Event Photo 2',
             description: 'Memorable events'
         },
         {
-            src: 'images/events/WhatsApp Image 2025-02-08 at 23.59.47_cdffcab7-min.jpg',
+            src: 'images/Events/WhatsApp Image 2025-02-08 at 23.59.47_cdffcab7-min.jpg',
             title: 'Event Photo 3',
             description: 'Event gathering'
         },
         {
-            src: 'images/events/WhatsApp Image 2025-02-08 at 23.59.47_0ff01a7c-min.jpg',
+            src: 'images/Events/WhatsApp Image 2025-02-08 at 23.59.47_0ff01a7c-min.jpg',
             title: 'Event Photo 4',
             description: 'Special moments'
         },
         {
-            src: 'images/events/WhatsApp Image 2025-02-08 at 23.31.08_a0270237-min.jpg',
+            src: 'images/Events/WhatsApp Image 2025-02-08 at 23.31.08_a0270237-min.jpg',
             title: 'Event Photo 5',
             description: 'Event portrait'
         },
         {
-            src: 'images/events/WhatsApp Image 2025-02-08 at 23.30.19_7ab8a811-min.jpg',
+            src: 'images/Events/WhatsApp Image 2025-02-08 at 23.30.19_7ab8a811-min.jpg',
             title: 'Event Photo 6',
             description: 'Event memories'
         },
         {
-            src: 'images/events/WhatsApp Image 2025-02-08 at 23.29.47_b5b80d5e-min.jpg',
+            src: 'images/Events/WhatsApp Image 2025-02-08 at 23.29.47_b5b80d5e-min.jpg',
             title: 'Event Photo 7',
             description: 'Event gathering'
         },
         {
-            src: 'images/events/WhatsApp Image 2025-02-08 at 23.29.24_8ba8ae55-min.jpg',
+            src: 'images/Events/WhatsApp Image 2025-02-08 at 23.29.24_8ba8ae55-min.jpg',
             title: 'Event Photo 8',
             description: 'Event moments'
         }
     ],
     products: [
         {
-            src: 'images/products/IMG_0436-min.JPG',
+            src: 'images/Products/IMG_0436-min.JPG',
             title: 'Product 1',
             description: 'Product showcase'
         },
         {
-            src: 'images/products/IMG_0435-min.JPG',
+            src: 'images/Products/IMG_0435-min.JPG',
             title: 'Product 2',
             description: 'Product photography'
         },
         {
-            src: 'images/products/IMG_0434-min.JPG',
+            src: 'images/Products/IMG_0434-min.JPG',
             title: 'Product 3',
             description: 'Product display'
         },
         {
-            src: 'images/products/137A4449 copy-min.jpg',
+            src: 'images/Products/137A4449 copy-min.jpg',
             title: 'Product 4',
             description: 'Product showcase'
         },
         {
-            src: 'images/products/137A4444 copy-min.jpg',
+            src: 'images/Products/137A4444 copy-min.jpg',
             title: 'Product 5',
             description: 'Product photography'
         },
         {
-            src: 'images/products/137A4435 copy-min.jpg',
+            src: 'images/Products/137A4435 copy-min.jpg',
             title: 'Product 6',
             description: 'Product display'
         },
         {
-            src: 'images/products/137A4434 copy-min.jpg',
+            src: 'images/Products/137A4434 copy-min.jpg',
             title: 'Product 7',
             description: 'Product showcase'
         },
         {
-            src: 'images/products/٢٩-min.jpg',
+            src: 'images/Products/٢٩-min.jpg',
             title: 'Product 8',
             description: 'Product photography'
         },
         {
-            src: 'images/products/٢٦-min.jpg',
+            src: 'images/Products/٢٦-min.jpg',
             title: 'Product 9',
             description: 'Product display'
         },
         {
-            src: 'images/products/٢٥-min.jpg',
+            src: 'images/Products/٢٥-min.jpg',
             title: 'Product 10',
             description: 'Product showcase'
         },
         {
-            src: 'images/products/١٧-min.jpg',
+            src: 'images/Products/١٧-min.jpg',
             title: 'Product 11',
             description: 'Product photography'
         },
         {
-            src: 'images/products/١٤-min.jpg',
+            src: 'images/Products/١٤-min.jpg',
             title: 'Product 12',
             description: 'Product display'
         },
         {
-            src: 'images/products/12-min.jpg',
+            src: 'images/Products/12-min.jpg',
             title: 'Product 13',
             description: 'Product showcase'
         },
         {
-            src: 'images/products/١٠-min.jpg',
+            src: 'images/Products/١٠-min.jpg',
             title: 'Product 14',
             description: 'Product photography'
         },
         {
-            src: 'images/products/٩-min.jpg',
+            src: 'images/Products/٩-min.jpg',
             title: 'Product 15',
             description: 'Product display'
         },
         {
-            src: 'images/products/9-min.jpg',
+            src: 'images/Products/9-min.jpg',
             title: 'Product 16',
             description: 'Product showcase'
         },
         {
-            src: 'images/products/٨-min.jpg',
+            src: 'images/Products/٨-min.jpg',
             title: 'Product 17',
             description: 'Product photography'
         },
         {
-            src: 'images/products/7-min.jpg',
+            src: 'images/Products/7-min.jpg',
             title: 'Product 18',
             description: 'Product display'
         },
         {
-            src: 'images/products/٣-min.jpg',
+            src: 'images/Products/٣-min.jpg',
             title: 'Product 19',
             description: 'Product showcase'
         },
         {
-            src: 'images/products/3 (1)-min.jpg',
+            src: 'images/Products/3 (1)-min.jpg',
             title: 'Product 20',
             description: 'Product photography'
         },
         {
-            src: 'images/products/٢-min.jpg',
+            src: 'images/Products/٢-min.jpg',
             title: 'Product 21',
             description: 'Product display'
         }
     ],
     locations: [
         {
-            src: 'images/locations/IMG_1069 copy-min.jpg',
+            src: 'images/Locations/IMG_1069 copy-min.jpg',
             title: 'Location 1',
             description: 'Beautiful location'
         },
         {
-            src: 'images/locations/IMG_1067 copy-min.jpg',
+            src: 'images/Locations/IMG_1067 copy-min.jpg',
             title: 'Location 2',
             description: 'Scenic view'
         },
         {
-            src: 'images/locations/IMG_1065 copy-min.jpg',
+            src: 'images/Locations/IMG_1065 copy-min.jpg',
             title: 'Location 3',
             description: 'Location photography'
         },
         {
-            src: 'images/locations/IMG_1063 copy-min.jpg',
+            src: 'images/Locations/IMG_1063 copy-min.jpg',
             title: 'Location 4',
             description: 'Location showcase'
         },
         {
-            src: 'images/locations/IMG_1064 copy-min.jpg',
+            src: 'images/Locations/IMG_1064 copy-min.jpg',
             title: 'Location 5',
             description: 'Location view'
         },
         {
-            src: 'images/locations/IMG_10866 copy-min.jpg',
+            src: 'images/Locations/IMG_10866 copy-min.jpg',
             title: 'Location 6',
             description: 'Location photography'
         },
         {
-            src: 'images/locations/IMG_1072 copy-min.jpg',
+            src: 'images/Locations/IMG_1072 copy-min.jpg',
             title: 'Location 7',
             description: 'Location showcase'
         },
         {
-            src: 'images/locations/IMG_1071 copy-min.jpg',
+            src: 'images/Locations/IMG_1071 copy-min.jpg',
             title: 'Location 8',
             description: 'Location view'
         },
         {
-            src: 'images/locations/IMG_1070 copy-min.jpg',
+            src: 'images/Locations/IMG_1070 copy-min.jpg',
             title: 'Location 9',
             description: 'Location photography'
         }
