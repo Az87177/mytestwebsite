@@ -12,7 +12,12 @@ const portfolioItems = [
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioGrid = document.querySelector('.portfolio-grid');
+const portfolioGrids = {
+    'portrait': document.getElementById('portrait-grid'),
+    'products': document.getElementById('products-grid'),
+    'events': document.getElementById('events-grid'),
+    'locations': document.getElementById('locations-grid')
+};
 
 // Mobile Navigation
 hamburger.addEventListener('click', () => {
@@ -24,7 +29,6 @@ hamburger.addEventListener('click', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        navLinks.classList.remove('active');
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -37,7 +41,7 @@ function filterPortfolio(category) {
         category === 'all' ? true : item.category === category
     );
     
-    portfolioGrid.innerHTML = items.map(item => `
+    portfolioGrids[category].innerHTML = items.map(item => `
         <div class="portfolio-item" data-category="${item.category}">
             <img src="${item.src}" alt="${item.title}" loading="lazy">
         </div>
@@ -50,9 +54,19 @@ filterPortfolio('all');
 // Filter button click handlers
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        
+        // Hide all grids
+        Object.values(portfolioGrids).forEach(grid => {
+            grid.classList.add('hidden');
+        });
+        
+        // Show selected grid
+        portfolioGrids[filter].classList.remove('hidden');
+        
+        // Update active button
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-        filterPortfolio(button.getAttribute('data-filter'));
     });
 });
 
@@ -160,4 +174,124 @@ document.addEventListener('DOMContentLoaded', function() {
 const scrollButton = document.querySelector('.scroll-indicator');
 scrollButton.addEventListener('click', () => {
     document.getElementById('categories').scrollIntoView();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioGrids = {
+        'portrait': document.getElementById('portrait-grid'),
+        'products': document.getElementById('products-grid'),
+        'events': document.getElementById('events-grid'),
+        'locations': document.getElementById('locations-grid')
+    };
+
+    // Show portrait grid by default
+    portfolioGrids['portrait'].classList.remove('hidden');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            
+            // Hide all grids
+            Object.values(portfolioGrids).forEach(grid => {
+                grid.classList.add('hidden');
+            });
+            
+            // Show selected grid
+            portfolioGrids[filter].classList.remove('hidden');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+
+    // Add click event to portfolio items for lightbox
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = `
+                <div class="lightbox-content">
+                    <img src="${img.src}" alt="${img.alt}">
+                    <button class="lightbox-close">&times;</button>
+                </div>
+            `;
+            document.body.appendChild(lightbox);
+            
+            // Close lightbox on click
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox || e.target.className === 'lightbox-close') {
+                    lightbox.remove();
+                }
+            });
+        });
+    });
+
+    // Category navigation
+    const categoryItems = document.querySelectorAll('.category-item');
+    categoryItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = item.getAttribute('data-category');
+            
+            // Hide categories section
+            document.getElementById('categories').classList.add('hidden');
+            
+            // Show portfolio section
+            document.getElementById('portfolio').classList.remove('hidden');
+            
+            // Show selected category grid
+            Object.values(portfolioGrids).forEach(grid => {
+                grid.classList.add('hidden');
+            });
+            portfolioGrids[category].classList.remove('hidden');
+            
+            // Update active filter button
+            filterButtons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    // Back button functionality
+    const backBtn = document.querySelector('.back-btn');
+    backBtn.addEventListener('click', () => {
+        // Hide portfolio section
+        document.getElementById('portfolio').classList.add('hidden');
+        
+        // Show categories section
+        document.getElementById('categories').classList.remove('hidden');
+    });
+});
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        nav.classList.remove('active');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        menuToggle.classList.remove('active');
+    });
 }); 
