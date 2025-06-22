@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Language Switch Button -->
+    <button class="language-switch gallery-lang-switch" id="languageSwitch" aria-label="Switch Language">
+        <span class="lang-text">عربي</span>
+    </button>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> <span data-en="Back to Home" data-ar="العودة للرئيسية">Back to Home</span>
+    </a>
+
+    <!-- Gallery Header -->
+    <header class="gallery-header">
+        <h1 id="gallery-title">Loading...</h1>
+    </header>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <!-- Photos will be loaded dynamically based on category -->
+        </div>
+    </div>
+
+    <!-- Fullscreen Modal -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-nav">
+            <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html> 
