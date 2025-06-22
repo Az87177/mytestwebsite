@@ -601,4 +601,9 @@ document.addEventListener('DOMContentLoaded', () => {
             openModal(index);
         });
     });
+
+    // Update gallery title when language changes
+    window.addEventListener('languageChanged', () => {
+        loadCategoryPhotos();
+    });
 }); 

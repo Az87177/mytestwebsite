@@ -21,8 +21,8 @@ class LanguageManager {
                 'Contracts Gallery': 'معرض العقود',
                 'Graduation Parties Gallery': 'معرض حفلات التخرج',
                 'Portrait Gallery': 'معرض البورتريه',
-                'Soldiers Graduate Gallery': 'معرض تخرج الجنود',
-                'Volunteers Gallery': 'معرض المتطوعين',
+                'Soldiers Graduate Gallery': 'معرض تخرج العساكر',
+                'Volunteers Gallery': 'معرض التطوعات',
                 'Weddings Gallery': 'معرض الأفراح',
                 'Loading...': 'جاري التحميل...',
                 'Gallery': 'المعرض'
@@ -55,6 +55,11 @@ class LanguageManager {
         
         // Update gallery title if we're on gallery page
         this.updateGalleryTitle();
+        
+        // Dispatch custom event for gallery page
+        window.dispatchEvent(new CustomEvent('languageChanged', {
+            detail: { language: this.currentLanguage }
+        }));
     }
 
     applyLanguage(language) {
@@ -93,6 +98,18 @@ class LanguageManager {
         
         if (translation) {
             galleryTitle.textContent = translation;
+        } else {
+            // If no direct translation found, try to find the reverse translation
+            const reverseLang = this.currentLanguage === 'en' ? 'ar' : 'en';
+            for (const [key, value] of Object.entries(this.translations[reverseLang])) {
+                if (value === currentText) {
+                    const newTranslation = this.translations[this.currentLanguage][key];
+                    if (newTranslation) {
+                        galleryTitle.textContent = newTranslation;
+                        break;
+                    }
+                }
+            }
         }
     }
 
